@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 class="fs-3 text-center">This is Home Page of APP</h1>
+
+<div
+  class="mx-auto row align-items-center gap-5 g-0 justify-content-start"
+  style="width: 80%; margin-top: 40px"
+>
+  {% for i in data %}
+  <div class="card col-3 mx-auto">
+    <img src="{{i.strMealThumb}}" class="w-100 img-fluid" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{i.strMeal}}</h5>
+      <p class="fs-6 fs-semibold">{{i.idMeal}}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
