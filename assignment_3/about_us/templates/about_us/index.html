@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-6">
+      <img
+        src="{% static 'images/about.jpg' %}"
+        class="img-fluid about-img"
+        alt="About Us Image"
+      />
+    </div>
+    <div class="col-md-6 text-justify">
+      <h2>About Us</h2>
+      <p>
+        Welcome to Silver Spoons, where culinary excellence meets exceptional
+        service. Our journey began with a passion for creating memorable dining
+        experiences, and today, we take pride in offering a diverse menu crafted
+        with the finest ingredients and a commitment to excellence.
+      </p>
+      <p>
+        At Silver Spoons, we believe in the power of food to bring people
+        together. Whether you're celebrating a special occasion or simply
+        craving a delicious meal, our dedicated team is here to ensure that
+        every moment spent with us is nothing short of extraordinary.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

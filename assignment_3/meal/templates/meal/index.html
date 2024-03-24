@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+<div
+  class="mx-auto my-4 row align-items-center gap-4 g-0 justify-content-start"
+  style="width: 85%; margin-top: 40px"
+>
+  {% for i in data.categories %}
+  <div class="card col-3 mx-auto">
+    <img src="{{i.strCategoryThumb}}" class="w-100 img-fluid" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title fs-5">
+        Item Name: <span class="text-red">{{i.strCategory}}</span>
+      </h5>
+      <p class="fs-6 fs-semibold">
+        Category: {{i.strCategory}} & ID: {{i.idCategory}}
+      </p>
+      <p class="fs-6 text-start">
+        {{i.strCategoryDescription|truncatewords:10}}
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
