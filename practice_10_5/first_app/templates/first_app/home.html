@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="w-11/12 mx-auto text-center text-lg font-semibold my-20">
+      <h1 class="text-2xl text-center font-bold my-10">First App Home page</h1>
+      <h1 class="text-xl font-bold my-5">
+        Example of Django Templates Filters
+      </h1>
+      <h1>{{title|title}}</h1>
+      <h1>{{title|upper}}</h1>
+      <p>{{description|truncatewords:5}}</p>
+      <p>{{description|truncatechars:15}}</p>
+      <p>Items: {{itemList|join:","}}</p>
+      <p>Date: {{ date|date:"SHORT_DATE_FORMAT" }}</p>
+      <p>Value: ${{ value }}</p>
+      <p>Value Add: {{value|add:"5"}}</p>
+      <p>{{items|dictsort:"price"}}</p>
+      <p>Length: {{numlist|length}}</p>
+      <p>Time: {{date|time:"H\h i\m"}}</p>
+      <p>MakeList: {{"HELLO"|make_list}}</p>
+    </div>
+  </body>
+</html>
